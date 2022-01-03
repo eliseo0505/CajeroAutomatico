@@ -46,14 +46,12 @@ func entregarCien() int {
 	if restoDeCien >= 100 {
 		if cantidadDeBilletes >= disponible[100] {
 			fmt.Println("Billtes de 100: ", disponible[100])
-			//restoDeCien = valorARetirar
 			restoDeCien := restoDeCien - montoDisponibleDeCien
 			return entregarCincuenta(restoDeCien)
 		}
 
 		if cantidadDeBilletes <= disponible[100] {
 			fmt.Println("Billetes de 100: ", cantidadDeBilletes)
-			//restoDeCien = valorARetirar
 			restoDeCien := restoDeCien - cantidadDeBilletes*100
 			return entregarCincuenta(restoDeCien)
 		}
